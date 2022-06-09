@@ -1,0 +1,482 @@
+@import url('https://fonts.googleapis.com/css?family=Hind:300,regular,500,600,700');
+
+:root {
+	--transition: 1.5s;
+}
+
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	background-color: #000;
+	overflow-x: hidden;
+}
+
+/* 
+
+	important WRAPPER
+
+*/
+
+.wrapper {
+	margin-top: -300px;
+}
+
+.block {}
+
+.block-video {}
+
+.block-video:first-child video {
+	display: none;
+	width: 700px;
+	box-shadow: 0 0 25px #e35ddf;
+	border-radius: 5%;
+}
+
+#player {
+	border-radius: 50% 50% 50% 0;
+	width: 520px;
+	box-shadow: 0 0 25px #e35ddf;
+}
+
+.block-button {
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 75%);
+}
+
+.block-button button {
+	width: 150px;
+	height: 30px;
+	background: transparent;
+	border: 2px solid #e35ddf;
+	cursor: pointer;
+	transition: 0.4s ease;
+}
+
+.block-button button:hover {
+	border: 2px solid #e5007a;
+}
+
+.block-button button p {
+	color: #fff;
+	font-family: 'Montserrat';
+	font-size: 1.1em;
+	font-style: italic;
+	letter-spacing: 0.1em;
+}
+
+.block-button:last-child {
+	display: none;
+}
+
+/* 
+
+	animation star
+
+*/
+
+.star {
+	animation: shooting 6s infinite;
+	background-color: #e35ddf;
+	border-radius: 5%;
+	position: absolute;
+	width: 10px;
+	opacity: 0.8;
+}
+
+.star-mod_1 {
+	animation-delay: 2.5s;
+	height: 5%;
+	top: 5%;
+	left: 5%;
+}
+
+.star-mod_2 {
+	animation-delay: 3s;
+	height: 5%;
+	top: 5%;
+	left: 10%;
+}
+
+.star-mod_3 {
+	animation-delay: 3.5s;
+	height: 5%;
+	top: 5%;
+	left: 1%;
+}
+
+
+/* 
+
+	controls hide
+
+*/
+
+#player::-webkit-media-controls {
+	opacity: 0;
+}
+
+#player::-ms-media-controls {
+	opacity: 0;
+}
+
+#player::-moz-media-controls {
+	opacity: 0;
+}
+
+#player::-o-media-controls {
+	opacity: 0;
+}
+
+audio::-webkit-media-controls {
+	display: none;
+}
+
+audio::-ms-media-controls {
+	display: none;
+}
+
+audio::-moz-media-controls {
+	display: none;
+}
+
+audio::-o-media-controls {
+	display: none;
+}
+
+/* 
+
+	Animation on video
+
+*/
+
+.video__anim {
+	display: none;
+	animation: star 1.3s;
+	background-color: #e35ddf;
+	width: 10px;
+	height: 0%;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	z-index: -1;
+	transition: 0.4s;
+}
+
+.video__anim_1 {
+	transform: rotate(45deg);
+}
+
+.video__anim_2 {
+	transform: rotate(-45deg);
+}
+
+/* 
+
+	hover video + audio
+
+*/
+
+.block-video:hover .soundbutton {
+	opacity: 1;
+}
+
+/* 
+
+	sound button
+
+*/
+
+.soundbutton {
+	filter: invert(0%);
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	transition: var(--transition);
+	opacity: 0;
+	cursor: pointer;
+	animation: play 5s infinite;
+	animation-delay: 2s;
+}
+
+/* 
+
+	Audio Player
+
+*/
+
+/* styling the outer music container */
+.music-container {
+	background: linear-gradient(45deg, rgb(0, 0, 0) 62%, rgb(139, 73, 146));
+	display: flex;
+	justify-content: center;
+	box-shadow: 0px 0px 15px #ff9cfc;
+	border: 1px solid #e35ddf;
+	border-radius: 2% 2% 0 0;
+	padding: 20px 0;
+	width: 30%;
+	position: absolute;
+	bottom: 0;
+	z-index: 0;
+}
+
+.img-container {
+	position: relative;
+	width: 90px;
+	right: 70%;
+	margin-top: -15%;
+}
+
+/* using animation to make the image rotate continiously when music is playing */
+.img-container img {
+	border-radius: 50%;
+	height: 90px;
+	position: absolute;
+}
+
+.navigation {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 1;
+	position: relative;
+	right: 50%;
+	transform: translate(50%, 0);
+}
+
+/* styling the navigation buttons */
+.action-btn {
+	background-color: #fff;
+	border: 0;
+	border-radius: 20px;
+	cursor: pointer;
+	padding: 15px;
+	margin: 0 20px;
+	filter: invert(100%);
+}
+
+.action-btn.action-btn-big {
+	font-size: 30px;
+	outline: none;
+}
+
+.action-btn:focus {
+	outline: 0;
+}
+
+.action-btn img {
+	width: 35px;
+	height: 35px;
+}
+
+/* styling the music-info div by placing it under the music container */
+.music-info {
+	background: linear-gradient(45deg, rgb(0, 0, 0), rgb(139, 73, 146) 27%, rgb(0, 0, 0) 73%);
+	border-radius: 15px 15px 0 0;
+	border: 1px solid #e35ddf;
+	position: absolute;
+	top: 0;
+	left: 5%;
+	width: 90%;
+	height: 70px;
+	padding: 10px 10px 10px 150px;
+	opacity: 0;
+	transform: translateY(0%);
+	transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+	z-index: 0;
+}
+
+/* making the music info pop up when the music playing using the transform property*/
+.music-container.play .music-info {
+	opacity: 1;
+	transform: translateY(-100%);
+}
+
+.music-info h4 {
+	margin: 0;
+}
+
+/* styling the song progress container */
+.progress-container {
+	background: #fff;
+	border-radius: 5px;
+	cursor: pointer;
+	margin: 10px 0;
+	height: 10px;
+	width: 80%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, 0);
+	box-shadow: 0 0 15px rgb(74, 74, 74);
+}
+
+/* styling the actual progress bar and making it flow along with the song*/
+.progress {
+	background-color: #d90f88;
+	border-radius: 5px;
+	height: 100%;
+	width: 0%;
+	transition: width 0.1s linear;
+}
+
+#title {
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+
+#title p {
+	font-size: 1.2em;
+	font-family: 'Montserrat';
+	color: #fff;
+}
+
+/* 
+
+	nothing-block
+
+*/
+
+.nothing {
+	display: none;
+	position: absolute;
+	bottom: -300px;
+	width: 1px;
+	height: 1px;
+}
+
+/* 
+
+	footer for link
+
+*/
+
+.footer {
+	position: absolute;
+	bottom: 350px;
+	opacity: 0;
+	transition: 0.4s;
+}
+
+.footer-block {}
+
+.footer-block a {
+	text-decoration: none;
+	text-transform: none;
+}
+
+.footer-block a img {
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 10%);
+	width: 30px;
+	height: 30px;
+}
+
+.footer-block a p {
+	font-size: 1.1em;
+	font-family: 'Montserrat';
+	color: #fff;
+	font-style: italic;
+	transition: .2s ease;
+}
+
+.footer-block a p:hover {
+	transition: .2s ease;
+	text-shadow: 3px 3px 5px #e5007a;
+}
+
+/* 
+
+	back-button
+
+*/
+
+.block-back {
+	position: absolute;
+}
+
+.block-back a {
+	text-decoration: none;
+	text-transform: none;
+}
+
+.block-back a img {
+	width: 50px;
+	height: 50px;
+	filter: invert(100%);
+}
+
+
+/* 
+
+	Key`s
+
+*/
+
+@keyframes flicker {
+
+	0%,
+	100% {
+		box-shadow: 0 0 35px #e35ddf;
+	}
+
+	50% {
+		box-shadow: 0 0 55px #e35ddf;
+	}
+
+}
+
+@keyframes play {
+
+	/* Ctrl + S */
+	0%,
+	100% {
+		opacity: 0;
+		filter: invert(100%);
+	}
+
+	50% {
+		opacity: 1;
+		filter: invert(0%);
+	}
+
+}
+
+@keyframes shooting {
+
+	/* Ctrl + S */
+	0%,
+	100% {
+		height: 5%;
+	}
+
+	50% {
+		height: 95%;
+		opacity: 0;
+		border-bottom: 50px solid rgb(255, 247, 0);
+		border-radius: 50%;
+	}
+
+}
+
+@keyframes star {
+
+	/* Ctrl + S */
+	0%,
+	100% {
+		height: 0%;
+		opacity: 0.8;
+	}
+
+	100% {
+		height: 65%;
+		opacity: 0;
+		background-color: #d90f56;
+		border-radius: 15px;
+	}
+
+}

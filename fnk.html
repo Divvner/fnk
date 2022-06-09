@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Flyte Music</title>
+	<!-- include css-files -->
+	<link rel="stylesheet" href="pages/css/general.css">
+	<link rel="stylesheet" href="pages/pages-media.css">
+	<link rel="stylesheet" href="loader/loader.css">
+	<link rel="shortcut icon" href="icon-id.jpg">
+</head>
+
+<body>
+
+	<!-- include JQuery -->
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
+		</script>
+
+	<main class="wrapper">
+		<div class="block">
+			<div class="block-video">
+				<video src="genres/media/video/kisma.mkv" class="cont video_1" controls loop onplay="clickPause([0])">
+				</video>
+			</div>
+			<div class="block-video">
+				<video class="cont video_2" id="player" controls loop onplay="clickPause([1])">
+					<source src="genres/media/video/kismaSpectre.mkv">
+				</video>
+			</div>
+			<div class="block-button">
+				<button>
+					<p>Full</p>
+				</button>
+			</div>
+			<div class="block-button">
+				<button>
+					<p>Spectre</p>
+				</button>
+			</div>
+		</div>
+	</main>
+
+	<div class="video__anim video__anim_1"></div>
+	<div class="video__anim video__anim_2"></div>
+
+	<div class="music-container" id="music-container">
+		<div class="music-info">
+			<div id="title">
+				<p>
+					<span style="color: #e35ddf;
+								 font-style: italic;">Kisma</span> - Fly Again
+				</p>
+			</div>
+			<div class="progress-container" id="progress-container">
+				<div class="progress" id="progress"></div>
+			</div>
+		</div>
+
+		<audio src="genres/media/audio/fl.mp3" id="audio" class="cont" loop onplay="clickPause([2])" controls>
+		</audio>
+
+		<div class="img-container">
+			<img src="images/authors/kisma.jpg" alt="music-cover" id="cover"
+				style="border: 1px solid rgb(105, 249, 80);">
+		</div>
+		<div class="navigation">
+			<button id="play" class="action-btn action-btn-big">
+				<img src="genres/img/svg/play.svg">
+			</button>
+		</div>
+	</div>
+
+	<div class="nothing"></div>
+
+	<div class="back">
+		<div class="block-back">
+			<a href="genres/dnb.html"><img src="svg/arrow.svg" alt="arrow"></a>
+		</div>
+	</div>
+
+	<div class="star star-mod_1"></div>
+	<div class="star star-mod_2"></div>
+	<div class="star star-mod_3"></div>
+
+	<div id="preloader">
+		<div id="loader">
+			<div class='music'>
+				<div class='bar'></div>
+				<div class='bar'></div>
+				<div class='bar'></div>
+				<div class='bar'></div>
+				<div class='bar'></div>
+				<div class='bar'></div>
+				<div class='bar'></div>
+				<div class='bar'></div>
+				<div class='bar'></div>
+				<div class='bar'></div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		// Repeat
+		let a = document.getElementsByClassName('cont');
+
+		function clickPause(b) {
+			for (i = 0; i < a.length; i++) {
+				if (!(i == b)) { a[i].pause(); a[i].currentTime = 0; };
+			}
+		}
+
+	</script>
+
+	<script src="genres/dnb.js"></script>
+
+</body>
+
+</html>

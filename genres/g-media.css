@@ -1,0 +1,343 @@
+/* 
+
+	Media Queries(Requests)
+
+*/
+
+@media (min-width: 1200px) {
+
+	html {
+		width: 100%;
+	}
+
+	#main-none__mb {
+		display: none;
+	}
+
+	.logo-block {
+		display: block;
+	}
+
+	.card-front__title p {
+		font-size: 2em;
+	}
+
+	.btn .play {
+		top: 205px;
+	}
+
+}
+
+@media (min-width: 980px) and (max-width: 1199px) {
+
+	.logo {
+		margin-top: 10px;
+	}
+
+	.card {
+		margin-top: 770px;
+	}
+
+	.card-front__title p {
+		font-size: 2em;
+	}
+
+	#main-none__mb {
+		display: none;
+	}
+
+	.btn .play {
+		top: 205px;
+	}
+
+}
+
+@media (min-width: 769px) and (max-width: 979px) {
+
+	.logo {
+		margin-top: 10px;
+		width: 20%;
+	}
+
+	.card {
+		margin-top: 600px;
+	}
+
+	.card-insert {
+		display: flex;
+		justify-content: center;
+	}
+
+	.main-card {
+		display: flex;
+		justify-content: center;
+		height: 32rem;
+		padding: 0 180px;
+	}
+
+	.card-side {
+		height: 26rem;
+		width: 18rem;
+	}
+
+	.card-front__title p {
+		font-size: 2em;
+	}
+
+	.card-front__title {
+		margin-top: 70px;
+	}
+
+	#main-none__mb {
+		display: none;
+	}
+
+	.btn .play {
+		top: 165px;
+	}
+
+	.audio audio {
+		width: 270px;
+	}
+
+	.card-front__text span {
+		width: 17px;
+		height: 17px;
+		margin-left: 120px;
+	}
+
+	.card-front-text__ex span {
+		width: 17px;
+		height: 17px;
+		margin-left: 100px;
+	}
+
+}
+
+@media (min-width: 640px) and (max-width: 768px) {
+
+	.logo {
+		margin-top: 30px;
+		width: 20%;
+	}
+
+	.card {
+		margin-top: 600px;
+	}
+
+	.card-insert {
+		display: flex;
+		justify-content: center;
+	}
+
+	.main-card {
+		display: flex;
+		justify-content: center;
+		height: 32rem;
+		padding: 0 150px;
+	}
+
+	.card-side {
+		height: 24rem;
+		width: 16rem;
+	}
+
+	.card-front__title {
+		margin-top: 65px;
+	}
+
+	.card-front__title p {
+		font-size: 2em;
+	}
+
+	#main-none__mb {
+		display: none;
+	}
+
+	.btn .play {
+		top: 145px;
+	}
+
+	.audio audio {
+		width: 240px;
+	}
+
+	.card-front__text span {
+		width: 17px;
+		height: 17px;
+		margin-left: 105px;
+		margin-top: -5px;
+	}
+
+	.card-front-text__ex span {
+		width: 17px;
+		height: 17px;
+		margin-left: 85px;
+		margin-top: -3px;
+	}
+
+	.card-front-1,
+	.card-front-2,
+	.card-front-3 {
+		border-bottom: 50px solid transparent;
+	}
+
+}
+
+@media (min-width: 480px) and (max-width: 640px) {
+
+	.logo {
+		margin-top: 30px;
+		width: 30%;
+	}
+
+	.card {
+		margin-top: 1200px;
+	}
+
+	.card-insert {
+		display: flex;
+		justify-content: center;
+	}
+
+	.main-card {
+		display: flex;
+		justify-content: center;
+		height: 33rem;
+		padding: 0 110px;
+	}
+
+	.card-front-1,
+	.card-front-2,
+	.card-front-3 {
+		border-bottom: 50px solid transparent;
+	}
+
+	.card-side {
+		height: 27rem;
+		width: 20rem;
+	}
+
+	.card-front__title {
+		margin-top: 80px;
+	}
+
+	.card-front__title p {
+		font-size: 2.7em;
+	}
+
+	#main-none {
+		display: none;
+	}
+
+	.btn .play {
+		top: 170px;
+	}
+
+	.card-front__text span {
+		width: 17px;
+		height: 17px;
+		margin-left: 125px;
+	}
+
+	.card-front-text__ex span {
+		width: 17px;
+		height: 17px;
+		margin-left: 105px;
+	}
+
+	.card-front__text p {
+		font-family: 'Hind';
+		font-size: 1.9em;
+		font-style: italic;
+		position: absolute;
+	}
+	.card-front-text__ex p {
+		font-family: 'Hind';
+		font-size: 1.9em;
+		font-style: italic;
+		position: absolute;
+	}
+
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+	.logo {
+		margin-top: 30px;
+		width: 30%;
+	}
+
+	.card {
+		margin-top: 1100px;
+	}
+
+	.card-insert {
+		display: flex;
+		justify-content: center;
+	}
+
+	.main-card {
+		display: flex;
+		justify-content: center;
+		height: 33rem;
+		padding: 0 110px;
+	}
+
+	.card-front-1,
+	.card-front-2,
+	.card-front-3 {
+		border-bottom: 60px solid transparent;
+	}
+
+	.card-side {
+		height: 25rem;
+		width: 18rem;
+	}
+
+	.card-front__title {
+		margin-top: 65px;
+	}
+
+	.card-front__title p {
+		font-size: 2.7em;
+	}
+
+	#main-none {
+		display: none;
+	}
+
+	.btn .play {
+		top: 140px;
+	}
+
+	.audio audio {
+		width: 270px;
+	}
+
+	.card-front__text span {
+		width: 17px;
+		height: 17px;
+		margin-left: 120px;
+	}
+
+	.card-front-text__ex span {
+		width: 17px;
+		height: 17px;
+		margin-left: 100px;
+	}
+
+	.card-front__text p {
+		font-family: 'Hind';
+		font-size: 1.9em;
+		font-style: italic;
+		position: absolute;
+	}
+	.card-front-text__ex p {
+		font-family: 'Hind';
+		font-size: 1.9em;
+		font-style: italic;
+		position: absolute;
+	}
+
+}

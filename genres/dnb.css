@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200&family=Work+Sans:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Hind:300,regular,500,600,700');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--index: calc(1vw + 1vh);
+}
+
+html {
+	position: relative;
+	width: 100%;
+}
+
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	background-color: black;
+	font-size: calc(var(--index) * .8);
+	color: #fff;
+	background: #000;
+	overflow-x: hidden;
+}
+
+/* 
+
+	cards
+
+*/
+
+.card {
+	margin-top: 770px;
+	position: absolute;
+}
+
+.card-insert {
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+}
+
+.main-card {
+	display: flex;
+	justify-content: center;
+	position: relative;
+	transition: all 0.8s ease;
+	perspective: 150rem;
+	height: 42rem;
+	padding: 0 250px;
+}
+
+.card-side {
+	height: 32rem;
+	backface-visibility: hidden;
+	transition: all 0.8s ease;
+	position: absolute;
+	width: 23rem;
+	overflow: hidden;
+	border-radius: 1%;
+}
+
+.card-front-1 {
+	background: linear-gradient(-135deg, rgb(223, 100, 192) 14%, rgb(131, 27, 105) 75%);
+	border-bottom: 70px solid transparent;
+}
+
+.card-back-1 {
+	background: linear-gradient(-135deg, rgb(223, 100, 192) 14%, rgb(131, 27, 105) 75%);
+}
+
+.card-front-2 {
+	background: linear-gradient(-135deg, rgb(249, 123, 223) 14%, rgb(189, 57, 127) 75%);
+	border-bottom: 70px solid transparent;
+}
+
+.card-back-2 {
+	background: linear-gradient(-135deg, rgb(249, 123, 223) 14%, rgb(189, 57, 127) 75%);
+}
+
+.card-front-3 {
+	background: linear-gradient(-135deg, rgb(170, 41, 201) 14%, rgb(204, 33, 223) 75%);
+	border-bottom: 70px solid transparent;
+}
+
+.card-back-3 {
+	background: linear-gradient(-135deg, rgb(170, 41, 201) 14%, rgb(204, 33, 223) 75%);
+}
+
+.card-back-1,
+.card-back-2,
+.card-back-3 {
+	transform: rotateY(180deg);
+}
+
+.main-card:hover .card-front-1 {
+	transform: rotateY(-180deg);
+}
+
+.main-card:hover .card-front-2 {
+	transform: rotateY(-180deg);
+}
+
+.main-card:hover .card-front-3 {
+	transform: rotateY(-180deg);
+}
+
+.main-card:hover .card-back-1 {
+	transform: rotateY(0deg);
+}
+
+.main-card:hover .card-back-2 {
+	transform: rotateY(0deg);
+}
+
+.main-card:hover .card-back-3 {
+	transform: rotateY(0deg);
+}
+
+/* 
+
+	customize of cards
+
+*/
+
+.card-front-1 img,
+.card-front-2 img,
+.card-front-3 img {
+	width: 100%;
+	box-shadow: 0 5px 25px #000;
+}
+
+.card-back-1 img,
+.card-back-2 img,
+.card-back-3 img {
+	height: 100%;
+}
+
+.card-front__title {
+	display: flex;
+	justify-content: center;
+	margin-top: 100px;
+}
+
+.card-front__title p {
+	font-family: 'Montserrat';
+	font-size: 1.5em;
+	font-weight: 600;
+	font-style: italic;
+}
+
+/* 
+
+	text of genres
+
+*/
+
+.card-front__text {
+	display: flex;
+	justify-content: center;
+	margin-top: 40px;
+}
+
+.card-front__text p {
+	font-family: 'Hind';
+	font-size: 1.3em;
+	font-style: italic;
+	position: absolute;
+}
+
+.card-front__text span {
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	border: 1px solid #000;
+	background-color: rgb(212, 74, 187);
+	margin-left: 150px;
+}
+
+.card-front-text__ex {
+	display: flex;
+	justify-content: center;
+	margin-top: 10px;
+}
+
+.card-front-text__ex p {
+	font-family: 'Hind';
+	font-size: 1.3em;
+	font-style: italic;
+	position: absolute;
+}
+
+.card-front-text__ex span {
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	border: 1px solid #000;
+	background-color: rgb(241, 63, 63);
+	margin-left: 120px;
+}
+
+/*  Button  */
+
+.btn {
+	cursor: pointer;
+	transition: 0.4s;
+}
+
+.btn .play {
+	display: flex;
+	justify-content: center;
+	position: relative;
+	top: 220px;
+	transition: 0.4s;
+}
+
+.btn .play img {
+	position: absolute;
+	width: 5rem;
+	height: 5rem;
+	filter: invert(100%);
+	transition: 0.3s;
+}
+
+.btn .play img:hover {
+	transform: rotate(360deg);
+}
+
+.btn .play:hover img {
+	transform: rotate(360deg);
+}
+
+.card-back-1 a,
+.card-back-2 a,
+.card-back-3 a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* 
+
+	audio
+
+*/
+
+.audio {
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 0);
+	bottom: 20px;
+}
